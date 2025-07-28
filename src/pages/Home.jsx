@@ -106,7 +106,6 @@ const Home = () => {
                   </li>
                   <li className="flex items-center"><span className="mr-2 text-teal-400">📍</span> Bangladesh</li>
                   <li className="flex items-center"><span className="mr-2 text-teal-400">💼</span> Student</li>
-                  <li className="flex items-center"><a href="https://www.suraiya.com" target="_blank" rel="noopener noreferrer" className="hover:text-teal-400 flex items-center"><span className="mr-2 text-teal-400">🌐</span> www.suraiya.com</a></li>
                 </ul>
                 <div className='w-full flex flex-wrap gap-2 mt-4 ' >
                   <p className="badge badge-lg bg-teal-600 text-white border-none">HTML</p>
@@ -116,10 +115,17 @@ const Home = () => {
                   <p className="badge badge-lg bg-teal-600 text-white border-none">EXPRESS JS</p>
                   <p className="badge badge-lg bg-teal-600 text-white border-none">MONGO DB</p>
                 </div>
-
-              </div><button className="btn btn-primary bg-teal-500 hover:bg-teal-600 text-white border-none rounded-full px-6 py-2 mt-6 text-lg transition duration-300 transform hover:scale-105 flex items-center" >
-                Download CV
-              </button>
+              </div>
+              <a
+                href="/assets/Suraiya's Resume.pdf"
+                download
+                target="_blank"
+                rel="noopener noreferrer"
+              >
+                <button className="btn btn-primary bg-teal-500 hover:bg-teal-600 text-white border-none rounded-full px-6 py-2 mt-6 text-lg transition duration-300 transform hover:scale-105 flex items-center">
+                  Download CV
+                </button>
+              </a>
             </div>
           </div>
 
@@ -233,6 +239,10 @@ const Home = () => {
           }}
         ></div>
         <div className="relative z-10 container mx-auto text-center">
+          <div className="flex flex-col items-center mb-8 animate-fadeInUp">
+            <div className="w-4 h-4 rounded-full bg-teal-500 mb-2"></div>
+            <div className="w-0.5 h-16 bg-teal-500"></div>
+          </div>
           <h2 className="text-4xl font-bold text-teal-400 mb-4 animate-on-scroll">Skills</h2>
           <p className='text-center mb-12'>I am striving to never stop learning and improving</p>
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
@@ -299,9 +309,62 @@ const Home = () => {
           }}
         ></div>
         <div className="relative z-10 container mx-auto text-center">
+          <div className="flex flex-col items-center mb-8 animate-fadeInUp">
+            <div className="w-4 h-4 rounded-full bg-teal-500 mb-2"></div>
+            <div className="w-0.5 h-16 bg-teal-500"></div>
+          </div>
           <h2 className="text-4xl font-bold text-teal-400 mb-12 animate-on-scroll">My Projects</h2>
           <div className=" flex flex-col gap-16">
+
             {/* project 1 */}
+            <div className="card  bg-gray-800 shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-on-scroll">
+              <div className="w-full h-full bg-red-100">
+                <div className="w-full h-[350px]  bg-white">
+                  <div className="h-[350px]">
+                    <iframe
+                      src="https://worksphere-a80ec.web.app/"
+                      className="w-full h-full border-0"
+                    ></iframe>
+                  </div>
+                </div>
+              </div>
+
+              <div className="card-body p-6 ">
+                <h3 className="card-title text-2xl font-semibold text-white mb-2">WorkSphere</h3>
+                <p className="text-gray-300 mb-4 text-start">
+                  A role-based employee management system that streamlines staff operations, salary tracking,payroll management and
+                  secure access control through a modern web interface.Admins and HR can add, edit, remove employees and process salary payments.Employees can view their personal profiles,add daily task ,manage task and salary history by month.
+                  Role-based dashboards provide a tailored experience for Admin, HR, and Employee users.
+
+
+                  <p className='text-teal-400 text-sm mt-2'>
+                    <strong className='text-gray-300'>Frontend: </strong>
+
+                    React,
+                    Tailwind CSS + DaisyUI,
+                    React Router,
+                    Firebase Auth,
+                    Firebase,
+                    Stripe
+                    <br />
+                    <strong className='text-gray-300'>Backend: </strong>
+                    Node.js,
+                    Express.js,
+                    MongoDB Atlas,
+                    Firebase-admin-sdk
+
+                  </p>
+                </p>
+                <div className="card-actions justify-end space-x-4">
+                  <a href='https://worksphere-a80ec.web.app/' className="btn btn-sm btn-outline btn-info border-teal-400 text-teal-400 hover:bg-teal-400 hover:text-white transition duration-300" target="_blank" rel="noopener noreferrer">
+                    Live Demo
+                  </a>
+
+                </div>
+              </div>
+            </div>
+
+            {/* project 2 */}
             <div className="card  bg-gray-800 shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-on-scroll">
               <div className="w-full h-full bg-red-100">
                 <div className="w-full h-[350px]  bg-white">
@@ -343,7 +406,7 @@ const Home = () => {
                 </div>
               </div>
             </div>
-            {/* project 2 */}
+            {/* project 3 */}
             <div className="card  bg-gray-800 shadow-xl rounded-lg overflow-hidden transform hover:scale-105 transition duration-300 animate-on-scroll">
               <div className="w-full h-full bg-red-100">
                 <div className="w-full h-[350px]  bg-white">
@@ -392,6 +455,9 @@ const Home = () => {
                 </div>
               </div>
             </div>
+
+
+
           </div>
         </div>
       </section>
